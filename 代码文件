@@ -1,0 +1,61 @@
+# 假设使用Python编写后端逻辑
+import random
+
+def generate_game_name(length=5, include_numbers=False, include_special_chars=False):
+    words = ["Warrior", "Mage", "Rogue", "Dragon", "Phoenix", "Shadow", "Light"]
+    numbers = "0123456789"
+    special_chars = "!@#$%^&*()_+"
+    
+    name = ""
+    for _ in range(length):
+        if random.choice([True, False]):
+            name += random.choice(words)
+        else:
+            if include_numbers:
+                name += random.choice(numbers)
+            elif include_special_chars:
+                name += random.choice(special_chars)
+            else:
+                name += random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    
+    return name
+
+# 用户请求生成游戏名
+user_request = {
+    "length": 6,
+    "include_numbers": True,
+    "include_special_chars": True
+}
+
+game_name = generate_game_name(**user_request)
+print(game_name)# 假设使用Python编写后端逻辑
+import random
+
+def generate_game_name(length=5, include_numbers=False, include_special_chars=False):
+    words = ["Warrior", "Mage", "Rogue", "Dragon", "Phoenix", "Shadow", "Light"]
+    numbers = "0123456789"
+    special_chars = "!@#$%^&*()_+"
+    
+    name = ""
+    for _ in range(length):
+        if random.choice([True, False]):
+            name += random.choice(words)
+        else:
+            if include_numbers:
+                name += random.choice(numbers)
+            elif include_special_chars:
+                name += random.choice(special_chars)
+            else:
+                name += random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    
+    return name
+
+# 用户请求生成游戏名
+user_request = {
+    "length": 6,
+    "include_numbers": True,
+    "include_special_chars": True
+}
+
+game_name = generate_game_name(**user_request)
+print(game_name)
